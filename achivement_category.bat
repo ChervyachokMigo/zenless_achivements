@@ -1,0 +1,1 @@
+node achivements_category.js && pause

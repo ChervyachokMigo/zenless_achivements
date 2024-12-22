@@ -1,0 +1,21 @@
+{
+  "name": "zenless_achivements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "jimp": "^1.6.0",
+    "keypress": "^0.2.1",
+    "node-screenshots": "^0.2.1",
+    "robotjs": "^0.6.0",
+    "tesseract.js": "^5.1.1",
+    "vosk": "^0.3.39"
+  }
+}
