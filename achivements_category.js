@@ -47,7 +47,8 @@ const print_view = () => {
 			min = achivements.length - 2 * print_limit - 1;
 		}
 
-		console.log(`Achievements (${min}-${max}/${achivements.length})`.green);
+		console.log(`Achievements`.yellow, `(${min}-${max}/${achivements.length})`.green);
+		console.log('CONTROL:'.yellow, '[Q]'.yellow,'Select category','[Del]'.yellow,'Delete')
 		console.log('Category:'.yellow, cursor.selected_cat === null ? 'None' : achivements_categories_const[cursor.selected_cat]);
 
 		for (let i = min; i <= max; i++) {
@@ -138,7 +139,11 @@ process.stdin.on('keypress', function (ch, key) {
 		}
 
 		if (key.name == 'delete') {
-			
+			achivements.splice(cursor.position, 1);
+            fs.writeFileSync('achivements.json', JSON.stringify(achivements), { encoding: 'utf8' });
+            cursor.position--;
+			if (cursor.position < 0) cursor.position = 0;
+            print_view();
 
 		}
 		print_view();
