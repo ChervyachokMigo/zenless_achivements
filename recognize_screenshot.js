@@ -226,7 +226,7 @@ module.exports = {
 							}
 
 							const rus_title = text_rus.shift();
-							const eng_title = '';
+							let eng_title = '';
 
 							const found_type = achivements_categories.findIndex( v => v.title === rus_title);
 							if (found_type == -1) {
